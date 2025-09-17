@@ -5,13 +5,17 @@ document.getElementById('loginBotten')
     const mobileNumber = 18936443440;
     const pinNumber = 1234;
 
-    const mobileNumberValue = document.getElementById('mobile-no').value
-    const mobileNumberValueConverted = parseInt(mobileNumberValue)
+    function TakeInputValue(id){
+        const value = parseInt(document.getElementById(id).value)
+        return value
+    }
 
-    const pinNumberValue = document.getElementById('pin-no').value
-    const pinNumberValueConverted = parseInt(pinNumberValue)
+    const mobileNumberValue = TakeInputValue('mobile-no')
     
-    if(mobileNumberValueConverted===mobileNumber&&pinNumberValueConverted===pinNumber){
+    const pinNumberValue = TakeInputValue('pin-no')
+
+    
+    if(mobileNumberValue===mobileNumber&&pinNumberValue===pinNumber){
         window.location.href = "./home.html"
     }
     else{
