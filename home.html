@@ -53,11 +53,11 @@
       </div>
 
       <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
-        <div class="border-1 border-[#0808081a] text-center p-3 rounded-xl">
+        <div id="add-botten" class="border-1 border-[#0808081a] text-center p-3 rounded-xl">
           <img src="./assets/wallet1.png" class="mx-auto" alt="" />
           <h2>Add Money</h2>
         </div>
-        <div class="border-1 border-[#0808081a] text-center p-3 rounded-xl">
+        <div id="cashout-button" class="border-1 border-[#0808081a] text-center p-3 rounded-xl">
           <img src="./assets/send1.png" class="mx-auto" alt="" />
           <h2>Cashout</h2>
         </div>
@@ -82,7 +82,7 @@
 
     <div class="all-form-sections max-w-lg mx-auto">
       <!-- add money -->
-      <div>
+      <div id="add-money-section">
         <h1 class="text-xl font-bold my-5 p-3">Add Money</h1>
         <form class="bg-white rounded-2xl p-8 mb-3">
           <div class="pb-3">
@@ -113,11 +113,9 @@
           <button id="add-money-btn" class="btn bg-[#0874F2] text-white mt-5 w-full rounded-3xl">Add Money</button>
         </form>
       </div>
-    </div>
-
-    <div class="all-form-sections max-w-lg mx-auto">
+    
       <!-- Cash Out -->
-      <div>
+      <div id="cash-out-section" style="display: none;">
         <h1 class="text-xl font-bold my-5 p-3">Cash Out</h1>
         <form class="bg-white rounded-2xl p-8 mb-3">            
             <div class="mt-5">

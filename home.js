@@ -21,3 +21,12 @@ document.getElementById('add-money-btn').addEventListener('click',function(e){
     document.getElementById('available-bal').innerText = totalNewBalance
 
 })
+
+document.getElementById("add-botten").addEventListener('click',function(){
+    document.getElementById('cash-out-section').style.display = "none"
+    document.getElementById("add-money-section").style.display = "block"
+})
+document.getElementById("cashout-button").addEventListener('click',function(){
+    document.getElementById("add-money-section").style.display = "none"
+    document.getElementById('cash-out-section').style.display = "block"
+})
