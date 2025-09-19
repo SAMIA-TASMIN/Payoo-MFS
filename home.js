@@ -21,6 +21,29 @@ function setInnerText(value){
     availableBalanceElement.innerText = value
 }
 
+function handleToggle(id){
+    const forms = document.getElementsByClassName("form")
+
+    for(const form of forms)
+    {
+        form.style.display = "none"
+    }
+    document.getElementById(id).style.display = "block"
+
+}
+
+function handleButtonToggle(id){
+     const formBtns = document.getElementsByClassName("form-btn")
+    for(const btn of formBtns){
+        btn.classList.remove("border-[#0874f2]","bg-[#0874f20d]")
+        btn.classList.add("border-[#0808081a]")
+    }
+
+    document.getElementById(id).classList.remove("border-[#0808081a]")
+    document.getElementById(id).classList.add("border-[#0874f2]","bg-[#0874f20d]")
+
+}
+
 
 document.getElementById('add-money-btn').addEventListener('click',function(e){
     e.preventDefault()
@@ -59,62 +82,36 @@ document.getElementById("withdraw-btn").addEventListener('click',function(e){
 
 
 document.getElementById("add-botten").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
+    
+    handleToggle("add-money-section")
+    handleButtonToggle("add-botten")
 
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("add-money-section").style.display = "block"
 })
 
 
 document.getElementById("cashout-button").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
-
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("cash-out-section").style.display = "block"
+    handleToggle("cash-out-section")
+    handleButtonToggle("cashout-button")
 })
 
 document.getElementById("transfer-money-btn").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
-
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("transfer-money-section").style.display = "block"
+   
+    handleToggle("transfer-money-section")
+    handleButtonToggle("transfer-money-btn")
+    
 })
 
 document.getElementById("get-bonus-btn").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
-
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("get-bonus-section").style.display = "block"
+    handleToggle("get-bonus-section")
+    handleButtonToggle("get-bonus-btn")
 })
 
 document.getElementById("pay-bill-btn").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
-
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("pay-bill-section").style.display = "block"
+    handleToggle("pay-bill-section")
+    handleButtonToggle("pay-bill-btn")
 })
 
 document.getElementById("transaction-btn").addEventListener('click',function(){
-    const forms = document.getElementsByClassName("form")
-
-    for(const form of forms)
-    {
-        form.style.display = "none"
-    }
-    document.getElementById("transaction-section").style.display = "block"
+    handleToggle("transaction-section")
+    handleButtonToggle("transaction-btn")
 })
